@@ -27,7 +27,7 @@ class Article
 
     /**
      * The publication date and time
-     * @var datetime
+     * @var string
      */
     public $published_at;
 
@@ -303,10 +303,10 @@ class Article
         if ($this->content == '') {
             $this->errors[] = 'Content is required';
         }
-        
+
         if ($this->published_at != '') {
             $date_time = date_create_from_format('Y-m-d H:i:s', $this->published_at);
-            
+
             if ($date_time === false) {
 
                 $this->errors[] = 'Invalid date and time';
@@ -320,7 +320,7 @@ class Article
                 }
             }
         }
-        
+
         return empty($this->errors);
     }
 
@@ -392,7 +392,7 @@ class Article
 
         return $conn->query("SELECT COUNT(*) FROM article$condition")->fetchColumn();
     }
-    
+
     /**
      * Update the image file property
      *
