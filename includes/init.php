@@ -41,5 +41,5 @@ function exceptionHandler($exception)
     exit();
 }
 
-//set_error_handler("errorHandler");
+set_error_handler("errorHandler");
 set_exception_handler('exceptionHandler');

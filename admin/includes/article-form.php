@@ -15,13 +15,12 @@
 
     <div class="form-group">
         <label for="content">Content</label>
-        <textarea class="form-control" name="content" rows="4" cols="40" id="content" placeholder="Article content"><?= htmlspecialchars($article->content); ?></textarea>
+        <textarea class="form-control" name="content" rows="4" cols="40" id="content" placeholder="Article content"><?=htmlspecialchars($article->content); ?></textarea>
     </div>
 
     <div class="form-group">
-        <label for="content">Content</label>
         <label for="published_at">Publication date and time</label>
-        <input class="form-control" type="datetime-local" name="published_at" id="published_at" value="<?= htmlspecialchars($article->published_at); ?>">
+        <input class="form-control" name="published_at" id="published_at" value="<?=htmlspecialchars($article->published_at); ?>">
     </div>
 
     <fieldset>

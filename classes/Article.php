@@ -108,7 +108,7 @@ class Article
             $article_id = $row['id'];
 
             if ($article_id != $previous_id) {
-                $row['category_names'] = [];
+                $row['category_name'] = [];
 
                 $articles[$article_id] = $row;
             }
@@ -305,7 +305,7 @@ class Article
         }
 
         if ($this->published_at != '') {
-            $date_time = date_create_from_format('Y-m-d H:i:s', $this->published_at);
+            $date_time = DateTime::createFromFormat('Y-m-d\TH:i', $this->published_at);
 
             if ($date_time === false) {
 

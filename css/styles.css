@@ -3,6 +3,6 @@ ul#index {
     list-style-type: none;
 }
 
-#message {
-    height: 10 em;
+textarea#message{
+    height: 10em;
 }
