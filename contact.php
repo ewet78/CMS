@@ -3,9 +3,23 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/PHPMailer/src/Exception.php';
-require 'vendor/PHPMailer/src/PHPMailer.php';
-require 'vendor/PHPMailer/src/SMTP.php';
+require_once 'vendor/autoload.php';
+
+require 'vendor/phpmailer/phpmailer/src/Exception.php';
+require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require 'vendor/phpmailer/phpmailer/src/SMTP.php';
+
+require 'vendor/league/oauth2-google/src/Exception/HostedDomainException.php';
+require 'vendor/league/oauth2-google/src/Provider/Google.php';
+require 'vendor/league/oauth2-google/src/Provider/GoogleUser.php';
+
+use League\OAuth2\Client\Provider\Google;
+
+$provider = new Google([
+    'clientId'     => 'CLIENTID',
+    'clientSecret' => 'CLIENTSECRET',
+    'redirectUri'  => 'REDIRECTURI',
+]);
 
 require 'includes/init.php';
 
@@ -43,10 +57,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host = SMTP_HOST;
             $mail->SMTPAuth = true;
+            $mail->Host = SMTP_HOST;
             $mail->Username = SMTP_USER;
             $mail->Password = SMTP_PASS;
-            $mail->SMTPSecure = 'tls';
-            $mail->Port = 587;
+            $mail->SMTPSecure = 'ssl';
+            $mail->Port = 465;
 
             $mail->setFrom('ewlinatokarz28@gmail.com');
             $mail->addAddress('ewelina.tokarz.programista@gmail.com');
