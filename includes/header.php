@@ -14,25 +14,31 @@
     <div class="container">
 
         <header>
-            <h1>My blog</h1>
+            <h1 id="title">My blog</h1>
         </header>
 
-        <nav>
+        <nav id="main-nav">
             <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-
+                <div class="row">
+                    <div class="col-lg-3 col-md-12">
+                        <li class="nav-item" id="home"><a class="nav-link" href="/">Home</a></li>
+                    </div>
                 <?php if (Auth::isLoggedIn()) : ?>
-
-                    <li class="nav-item"><a class="nav-link" href="/admin/">Admin</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/logout.php">Log out</a></li>
-
+                    <div class="col-lg-3 col-md-12">
+                        <li class="nav-item"><a class="nav-link" href="/admin/">Admin</a></li>
+                    </div>
+                    <div class="col-lg-3 col-md-12">
+                        <li class="nav-item"><a class="nav-link" href="/logout.php">Log out</a></li>
+                    </div>
                 <?php else : ?>
-
-                    <li class="nav-item"><a class="nav-link" href="/login.php">Log in</a></li>
-
+                    <div class="col-lg-3 col-md-12">
+                        <li class="nav-item"><a class="nav-link" href="/login.php">Log in</a></li>
+                    </div>
                 <?php endif; ?>
-
-                    <li class="nav-item"><a class="nav-link" href="/contact.php">Contact</a></li>
+                    <div class="col-lg-3 col-md-12">
+                        <li class="nav-item" id="contact"><a class="nav-link" href="/contact.php">Contact</a></li>
+                    </div>
+                </div>
             </ul>
         </nav>
 

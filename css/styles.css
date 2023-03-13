@@ -1,3 +1,19 @@
+body {
+    margin: 0px !important;
+    padding: 0px !important;
+    width: 100% !important;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.container{
+    margin: 0px !important;
+    padding: 0px !important;
+    width: 100% !important;
+    overflow-x: hidden;
+    max-width: none;
+}
+
 ul#index {
     padding-left: 0;
     list-style-type: none;
@@ -5,4 +21,90 @@ ul#index {
 
 textarea#message{
     height: 10em;
+}
+
+h1#title{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    margin-bottom: auto;
+    padding: 10px;
+
+}
+
+ul.nav{
+    background-color: rgb(49, 49, 58);
+    text-align: center;
+    
+}
+
+.row{
+    margin:auto;
+    text-align: center !important;
+    overflow-x: hidden;
+}
+
+div.col-lg-3.col-md-12{
+    width: 150px;
+}
+
+
+
+ul#index{
+    text-align: center;
+}
+
+span.page-link{
+    background-color: rgb(49, 49, 58);
+    border: 3px solid blue;
+    border-radius: 5px;
+}
+
+a.page-link{
+    background-color: rgb(49, 49, 58);
+    border: 3px solid blue;
+    border-radius: 5px;  
+}
+
+ul.pagination{
+    justify-content: space-around;
+}
+
+#login{
+    margin: 50px 100px 100px 100px;
+    width: 25%;
+    display: inline-block;
+}
+
+h2{
+    margin: 50px 50px 0px 50px;
+}
+.btn{
+    background-color: rgb(49, 49, 58);
+    color: #007bff;
+    border: 3px solid blue;
+    border-radius: 5px;  
+}
+
+#formArticle{
+    width: 50%;
+    display: inline-block;
+    text-align: justify;
+}
+
+.btn#new-article{
+    margin: auto;
+    text-align: center;
+    display: flex;
+}
+
+p#par-new-article{
+    margin: 50px 50px 10px 50px;
+    font-size: 1.5rem;
+}
+
+#formContact{
+    width: 50%;
+    display: inline-block;
+    text-align: justify;
 }
