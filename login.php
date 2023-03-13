@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <p><?= $error ?></p>
 <?php endif; ?>
 
-<form method="post">
+<form method="post" id="login">
 
     <div class="form-group">
         <label for="username">Username</label>

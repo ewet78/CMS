@@ -35,6 +35,6 @@
         <?php endforeach; ?>
     </fieldset>
 
-    <button class="btn">Save</button>
+    <button class="btn" id="new-article">Save</button>
 
 </form>
